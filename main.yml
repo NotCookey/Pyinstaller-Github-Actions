@@ -45,21 +45,21 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: windows-executables
-        path: main/
+        path: dist/
 
     - name: Create Artifact (Linux)
       if: matrix.os == 'ubuntu-latest'
       uses: actions/upload-artifact@v3
       with:
         name: linux-executables
-        path: main/
+        path: dist/
 
     - name: Create Artifact (macOS)
       if: matrix.os == 'macos-latest'
       uses: actions/upload-artifact@v3
       with:
         name: macos-executables
-        path: main/
+        path: dist/
 
     - name: List files in dist folder
       run: ls -R ./dist/
